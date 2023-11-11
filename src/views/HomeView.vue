@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div v-for="pokemon in pokemons">
-      {{ pokemon.name }}
-    </div>
+    <PokemonCard v-for="pokemon in pokemons" :pokemon="pokemon">
+    </PokemonCard>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
 import axios from "axios";
+import PokemonCard from "../components/PokemonCard.vue";
 
 const pokemons = ref([]);
 
