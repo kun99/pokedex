@@ -13,7 +13,4 @@ export default {
   getPokemons() {
     return apiClient.get("/pokemon");
   },
-  getPokemon(pokemon) {
-    return apiClient.get("/pokemon" + pokemon);
-  },
 };
