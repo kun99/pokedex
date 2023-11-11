@@ -1,7 +1,7 @@
 <template>
-  <div class="grid grid-cols-2">
-    <div class="px-2" v-for="(pokemon, index) in pokemons" :pokemon="pokemon">
-      <PokemonCard :pokemon="pokemon" :index="index" />
+  <div class="grid grid-cols-4">
+    <div class="px-2 py-2" v-for="pokemon in pokemons" :pokemon="pokemon">
+      <PokemonCard :pokemon="pokemon"/>
     </div>
   </div>
 </template>
