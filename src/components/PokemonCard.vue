@@ -1,18 +1,22 @@
 <template>
   <!--name, type1, type2, j-name, evolution, image link-->
-  <div>
-    <div>
+  <div class="flex flex-row border border-gray-200 rounded-lg">
+    <div class="flex flex-1 justify-center">
       <img :src="pokemon.image" />
     </div>
-    <div>
-      <h2>{{ pokemon.name }}</h2>
-      <h3>{{ pokemon.j_name }}</h3>
+    <div class="flex-1">
+      <div class="flex flex-row pt-5">
+        <p class="text-red-500">{{ pokemon.name }} (</p>
+        <p class="text-red-500">{{ pokemon.j_name }})</p>
+      </div>
+      <div class="flex flex-row">
+        <p>{{ pokemon.type1 }}/</p>
+        <p>{{ pokemon.type2 }}</p>
+      </div>
+      <div class="">
+        <p class="pt-5">{{ pokemon.evolution }}</p>
+      </div>
     </div>
-    <div>
-      <p>{{ pokemon.type1 }}</p>
-      <p>{{ pokemon.type2 }}</p>
-    </div>
-    <span>{{ pokemon.evolution }}</span>
   </div>
 </template>
 
