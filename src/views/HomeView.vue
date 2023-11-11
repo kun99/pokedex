@@ -8,17 +8,15 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import axios from "axios";
 import PokemonCard from "../components/PokemonCard.vue";
+import PokemonService from "@/services/PokemonService.js";
 
 const pokemons = ref([]);
 
 function fetchPokemonData() {
-  axios
-    .get("https://my-json-server.typicode.com/kun99/pokemon-data/pokemon")
-    .then((response) => {
-      pokemons.value = response.data;
-    });
+  PokemonService.getPokemons().then((response) => {
+    pokemons.value = response.data;
+  });
 }
 
 onMounted(() => {
