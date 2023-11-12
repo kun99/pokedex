@@ -1,7 +1,7 @@
 <template>
   <nav class="flex flex-row justify-around items-center bg-red-800">
     <RouterLink to="/" class="flex w-1/3 items-center py-2 pl-10 text-white">
-      <img class="w-8" src="public/pokedex.png" />
+      <img class="w-8" src="@/assets/pokedex.png" />
       ICCS340 Pokédex</RouterLink
     >
     <div class="flex w-1/3 justify-center">
