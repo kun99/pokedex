@@ -1,13 +1,9 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router";
+import Navbar from "@/components/Navbar.vue";
 </script>
 
 <template>
-  <div>
-    <nav class="flex justify-around">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </nav>
-  </div>
+  <Navbar />
   <RouterView />
 </template>
