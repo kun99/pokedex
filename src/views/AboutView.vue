@@ -19,7 +19,7 @@
           Github repo
         </a>
         <a
-          href=""
+          href="https://pokedex-l4u0.onrender.com/"
           class="bg-zinc-200 border rounded-lg underline px-2 mx-2"
           target="_blank"
         >
