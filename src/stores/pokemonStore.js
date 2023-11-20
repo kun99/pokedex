@@ -10,6 +10,9 @@ export const usePokemonsStore = defineStore("pokemons", {
   state: () => ({ pokemons: [] }),
   getters: {
     getPokemons: (state) => {
+      return state.pokemons;
+    },
+    getPokemon: (state) => {
       return (pokemonName) => state.pokemons.find((pokemon) => pokemon.name === pokemonName);
     },
   },

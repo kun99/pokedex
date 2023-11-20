@@ -1,5 +1,5 @@
 <template>
-  <div v-if="fetched" class="grid grid-cols-4">
+  <div v-if="fetched" class="grid grid-cols-4 py-4">
     <div class="px-2 py-2" v-for="pokemon in pokemons" :pokemon="pokemon">
       <PokemonCard :pokemon="pokemon" />
     </div>

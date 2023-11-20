@@ -50,7 +50,7 @@ import { usePokemonsStore } from "@/stores/pokemonStore.js";
 const pokemon = ref(null);
 
 const pokemonsStore = usePokemonsStore();
-const { getPokemons } = storeToRefs(pokemonsStore);
+const { getPokemon } = storeToRefs(pokemonsStore);
 
 const props = defineProps({
   pokemon_name: { required: true },
@@ -70,7 +70,7 @@ const props = defineProps({
 // }
 
 async function usingStore() {
-  pokemon.value = await getPokemons.value(props.pokemon_name);
+  pokemon.value = await getPokemon.value(props.pokemon_name);
 }
 
 onMounted(async () => {
