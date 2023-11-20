@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar.vue";
 import { onBeforeMount } from "vue";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "@/js/firebase.js";
-import { pokemons } from "@/js/adder.js";
+import { pokemons } from "@/js/pokemons.js";
 
 /*
   this is to add all the pokemons to the firestore

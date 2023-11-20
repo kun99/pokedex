@@ -27,5 +27,11 @@
         </a>
       </div>
     </div>
+    <div class="mt-5">
+      <ul class="list-disc">
+        <li>The 'Home' page uses data from the db.json file.</li>
+        <li>The 'About' page uses data from firebase.</li>
+      </ul>
+    </div>
   </div>
 </template>

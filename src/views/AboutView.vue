@@ -14,11 +14,13 @@ import { ref, onMounted } from "vue";
 import PokemonCard from "@/components/PokemonCard.vue";
 import { db } from "@/js/firebase.js";
 import { collection, onSnapshot } from "firebase/firestore";
+import { usePokemonsStore } from "@/stores/pokemonStore.js";
 
 const pokemons = ref([]);
 const fetched = ref(false);
 
 async function getPokemons() {
+  const pokemonsStore = usePokemonsStore();
   onSnapshot(collection(db, "pokemons"), (querySnapshot) => {
     let pokemonsSnapshot = [];
     querySnapshot.forEach((doc) => {
@@ -33,6 +35,7 @@ async function getPokemons() {
       pokemonsSnapshot.push(pokemon);
     });
     pokemons.value = pokemonsSnapshot;
+    pokemonsStore.setupPokemons(pokemons.value);
   });
 }
 
