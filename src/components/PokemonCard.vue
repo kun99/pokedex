@@ -1,7 +1,7 @@
 <template>
   <!--name, type1, type2, j-name, evolution, image link-->
   <RouterLink :to="{ name: 'pokemon_details', params: {pokemon_name: pokemon.name}}">
-    <div class="flex flex-col items-center py-3 border border-gray-200 rounded-lg">
+    <div class="flex flex-col items-center py-3 border border-gray-200 rounded-lg hover:bg-gray-100">
       <div>
         <img :src="pokemon.image" />
       </div>

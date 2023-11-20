@@ -18,11 +18,11 @@
           </div>
           <div class="pt-5 text-lg">Type:</div>
           <div class="flex flex-row">
-            <div :class="`border rounded-md px-5 mr-1 bg-${pokemon.type1.toLowerCase()} text-white`">
+            <div :class="`border rounded-md w-[60px] mr-1 bg-${pokemon.type1.toLowerCase()} text-white text-center`">
               <p>{{ pokemon.type1 }}</p>
             </div>
             <!-- as some pokemons dont have a second type -->
-            <div :class="`border rounded-md px-5 mr-1 bg-${pokemon.type2.toLowerCase()} text-white`" v-if="pokemon.type2">
+            <div :class="`border rounded-md w-[60px] mr-1 bg-${pokemon.type2.toLowerCase()} text-white text-center`" v-if="pokemon.type2">
               <p>{{ pokemon.type2 }}</p>
             </div>
           </div>
