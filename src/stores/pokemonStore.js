@@ -15,7 +15,6 @@ export const usePokemonsStore = defineStore("pokemons", {
   },
   actions: {
     setupPokemons(pokemons) {
-      console.log(pokemons);
       this.pokemons = pokemons;
     },
   },

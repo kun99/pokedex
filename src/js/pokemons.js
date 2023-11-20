@@ -1,6 +1,6 @@
 /* because I'm too lazy to manually input all the pokemons to the firestore*/
 
-var pokemons = [
+export const pokemons = [
   {
     name: "Venusaur",
     type1: "Grass",
@@ -74,7 +74,7 @@ var pokemons = [
   {
     name: "Jynx",
     type1: "Ice",
-    type2: "Psychic ",
+    type2: "Psychic",
     j_name: "Rougela",
     evolution: "Jynx is the evolved form of Smoochum as of level 30.",
     image: "https://static.wikia.nocookie.net/pokemon/images/a/a8/124.png",
@@ -84,7 +84,8 @@ var pokemons = [
     type1: "Water",
     type2: "Ground",
     j_name: "Laglarge",
-    evolution: "Swampert is the final evolution of the Hoenn First partner Pokémon Mudkip. It evolves from Marshtomp at level 36.",
+    evolution:
+      "Swampert is the final evolution of the Hoenn First partner Pokémon Mudkip. It evolves from Marshtomp at level 36.",
     image: "https://static.wikia.nocookie.net/pokemon/images/4/4e/260.png",
   },
   {
@@ -100,11 +101,8 @@ var pokemons = [
     type1: "Water",
     type2: null,
     j_name: "Kamekkusu",
-    evolution: "Blastoise evolves from Wartortle starting at level 36. Blastoise can further evolve into Mega Blastoise using the Blastoisinite.",
+    evolution:
+      "Blastoise evolves from Wartortle starting at level 36. Blastoise can further evolve into Mega Blastoise using the Blastoisinite.",
     image: "https://static.wikia.nocookie.net/pokemon/images/d/d2/009.png",
   },
 ];
-
-export {
-  pokemons
-}

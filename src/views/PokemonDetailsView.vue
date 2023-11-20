@@ -18,11 +18,11 @@
           </div>
           <div class="pt-5 text-lg">Type:</div>
           <div class="flex flex-row">
-            <div class="bg-slate-200 border rounded-md px-5 mr-1">
+            <div :class="`border rounded-md px-5 mr-1 bg-${pokemon.type1.toLowerCase()} text-white`">
               <p>{{ pokemon.type1 }}</p>
             </div>
             <!-- as some pokemons dont have a second type -->
-            <div class="bg-slate-200 border rounded-md px-5" v-if="pokemon.type2">
+            <div :class="`border rounded-md px-5 mr-1 bg-${pokemon.type2.toLowerCase()} text-white`" v-if="pokemon.type2">
               <p>{{ pokemon.type2 }}</p>
             </div>
           </div>
@@ -44,13 +44,13 @@
 /*  Using pinia hurt my brain a little bit  */
 import { ref, onMounted } from "vue";
 import PokemonService from "@/services/PokemonService.js";
-import { storeToRefs } from 'pinia'
+import { storeToRefs } from "pinia";
 import { usePokemonsStore } from "@/stores/pokemonStore.js";
 
 const pokemon = ref(null);
 
 const pokemonsStore = usePokemonsStore();
-const { getPokemons } = storeToRefs(pokemonsStore)
+const { getPokemons } = storeToRefs(pokemonsStore);
 
 const props = defineProps({
   pokemon_name: { required: true },
@@ -69,12 +69,11 @@ const props = defineProps({
 //   });
 // }
 
-function usingStore() {
-  pokemon.value = getPokemons.value(props.pokemon_name);
-  console.log(pokemon.value)
+async function usingStore() {
+  pokemon.value = await getPokemons.value(props.pokemon_name);
 }
 
-onMounted(() => {
+onMounted(async () => {
   //fetchPokemonData();
   usingStore();
 });
