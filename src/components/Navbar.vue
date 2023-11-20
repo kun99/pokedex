@@ -15,9 +15,13 @@
         class="py-2 px-5 text-white rounded hover:bg-red-600 hover:text-white"
         >About</RouterLink
       >
+      <RouterLink
+        to="/info"
+        class="py-2 px-5 text-white rounded hover:bg-red-600 hover:text-white"
+        >Info</RouterLink
+      >
     </div>
     <!--dunno how to center the buttons without having this-->
-    <div class="flex w-1/3">
-    </div>
+    <div class="flex w-1/3"></div>
   </nav>
 </template>
